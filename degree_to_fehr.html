@@ -18,9 +18,8 @@
 //Celsius to Fahrenheit Formula: (°C * 1.8) + 32 = °F
 //Fahrenheit to Celsius Formula: (°F - 32) / 1.8 = °C
 function convert(){
-   let celcius= document.getElementById('degree').value
-   let rounded = Math.round(celcius * 10) / 10
-   return document.getElementById('result').innerText= (rounded * 1.8) + 32;
+   let celcius= parseInt(document.getElementById('degree').value)
+   return document.getElementById('result').innerText= (celcius * 1.8) + 32;
 }
 
 
