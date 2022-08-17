@@ -19,25 +19,30 @@
             </div>
 
         </div>
-        <div id="result"></div>
+        <div id="result" class="row"></div>
         
       </div>
       <script>
-function submit(){
+ function submit(){
     let todos = [];
     let todo = document.getElementById('body').value
     todos.push(todo)
-    console.log(todos)
+    let i = 0;
     todos.forEach((item, index)=>{
-	console.log(index, item)
-    document.getElementById('result').innerHTML=`<div class="card" style="width: 18rem;">
+       
+    document.getElementById('result').innerHTML +=`<div class="card col-3 mx-2 my-2" style="width: 18rem;">
                 <div class="card-body">
                   <p class="card-text">${item}</p>
-                  <a href="#!" class="btn btn-sm float-end btn-danger">Remove</a>
+                  <a href="#!" onclick='removeItem(${i})' class="btn btn-sm float-end btn-danger">Remove</a>
                </div>
             </div>`
 })
+ document.getElementById('body').value = ''
 }
-      </script>
+
+function removeItem(index) {
+    alert(showTodos)
+}
+ </script>
 </body>
 </html>
